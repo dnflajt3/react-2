@@ -1,0 +1,21 @@
+import { posts } from "./posts";
+
+export default function Page() {
+  
+    if (!posts) {
+      return <h1>게시글을 찾을 수 없습니다!</h1>;
+    }
+  
+    return (
+      <>
+      {
+        posts.map((post)=>(
+          <article>
+            <h1>{post.title}</h1>
+            <p>{post.content}</p>
+          </article>
+        ))
+      }
+      </>
+    );
+}

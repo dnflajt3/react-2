@@ -24,11 +24,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      
+      <header>
+        root layout header
+      </header>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
+      <footer>
+        root layout footer
+      </footer>
     </html>
   );
 }
