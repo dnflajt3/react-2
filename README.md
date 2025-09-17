@@ -11,6 +11,17 @@
 
 - 특별한 이유가 없다면 switch를 사용
 
+### 1. Creating a page(페이지 만들기)
+
+- layout은 여러 페이지에서 공유 되는 UI임.
+
+- layout은 네비게이션에서 state 및 상호작용을 유지하며, 다시 렌더링 되지는 않음.
+- layout 파일에서 react 컴포넌트의 default export를 사용하여 layout을 정의할 수 있음.
+- layout 컴포넌트는 page 또는 다른 layout이 될 수 있는 children prop을 허용해야 함.
+- #children은 컴포넌트 안에 감싸진 요소 ( 컴포넌트) 를 의미함.
+- 다음 코드에서 <page/>는 <Layout> 컴포넌트의 children임.
+- layout 컴포넌트를 만들 때 그 안에 들어갈 콘텐츠(children)을 받을 수 있게 해야 하고 그 컨텐츠는 page 또는 layout 컴포넌트가 될 수 도 있다는 의미
+
 ## 9월 10일(3주차)
 ### 용어 정의
 
