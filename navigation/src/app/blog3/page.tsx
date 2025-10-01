@@ -1,6 +1,6 @@
 import { posts } from "./posts";
 
-export default function Page() {
+export default async function  Page() {
   
     if (!posts) {
       return <h1>게시글을 찾을 수 없습니다!</h1>;

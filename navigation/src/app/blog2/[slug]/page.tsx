@@ -1,0 +1,19 @@
+import { posts } from "../posts";
+
+export default async function Posts({ params }: { params: { slug: string } }) {
+  
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+  const { slug } = await params; // await 제거
+  const post = posts.find((p) => p.slug === slug);
+
+  if (!post) {
+    return <h1>게시글을 찾을 수 없습니다!</h1>;
+  }
+
+  return (
+    <article>
+      <h1>{post.title}</h1>
+      <p>{post.content}</p>
+    </article>
+  );
+}
